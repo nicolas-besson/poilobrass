@@ -1,0 +1,500 @@
+\version "2.18.2"
+\language "italiano"
+
+\include "articulate.ly"
+
+\header {
+  title = "Let's get loud!"
+  composer = "JLOBB, from Sonson with bush love - v1.0"
+}
+
+
+global = {
+  \key do \minor
+  \time 4/4
+}
+
+trumpetBb = \relative do' {
+  \global
+  \compressFullBarRests
+  
+  % Intro
+  \mark "Intro"
+
+  \repeat volta 2 {
+    sol'8 r sol fa lab fa4 sol8 |
+    r8 re r re fa4 re8 fa|
+    mib r do r r fa fa re|
+  }
+  \alternative {
+    { r8 sol r4 r2 | }
+    { r8 re r4 mib re | }
+  }
+
+  % A
+  \mark "A"
+  mib8 r mib r mib fa r fa~ |
+  fa sol r re re4 mib8 re |
+  do do do do mib sol r fa~ |
+  fa fa fa sol mib4 re |
+  do do mib8 fa r fa~ |
+  fa sol r re fa4 mib8 re |
+  do do do do mib sol r fa~ |
+  fa sol r re mib4 re |
+  do4 do mib8 fa r re~ |
+  re re r re do4 mib8 re |
+  do do do do mib fa r re~ |
+  re re re re mib4 sol8 sol |
+
+  % B
+  \mark "B"
+
+  \repeat volta 2 {
+    sib, sol' fa lab, mib' lab,4 do8~ |
+    do do fa si, fa' si, fa' sol |
+    mib4 do8 do do re r re | 
+    r re r fa fa4 re8 mib |
+    do sol' fa mib mib mib mib fa~ |
+    fa fa fa mib fa sib, fa' sol |
+    mib4 do8 do r fa r re |
+    r sol, sib re fa mib mib mib |
+    sol sol mib mib fa mib mib mib |
+    fa fa fa fa~ fa mib mib mib |
+    sol sol mib mib fa mib mib mib |
+    fa fa fa fa~ fa mib mib mib |
+    sol4 mib fa8 mib mib mib |
+    fa fa fa fa~ fa mib mib mib |
+    sol4 mib8 fa~ fa mib do mib |
+  }
+  \alternative {
+    { fa fa fa fa~ fa do do sol | }
+    { fa' fa fa fa sol4 fa | }
+  }
+ 
+   % C
+  \mark "C"
+  
+ 
+}
+
+clarinet = \relative do'' {
+  \global
+  \compressFullBarRests
+
+  \repeat volta 2 {
+    r8 r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+    r r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+    r r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+    r1| 
+  }
+}
+
+altoSax = \relative do' {
+  \global
+  \compressFullBarRests
+
+  % Intro
+  \mark "Intro"
+
+  \repeat volta 2 {
+    r8 r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+    r r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+    r r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+  }
+
+  \alternative {
+    { r1 | }
+    { r2 mib4 re | }
+  }
+
+
+
+  % A
+  \mark "A"
+  
+  do r mib8 sol r fa~ |
+  fa8 sol r4 r mib8 re |
+  do do do do mib sol r fa~ |
+  fa fa fa sol mib4 re4 |
+  do4 r mib8 sol r fa~ |
+  fa sol r4 r mib8 re |
+  do do do do mib sol r fa~ |
+  fa sol r4 mib re |
+  do r mib8 sol r fa~ |
+  fa sol r4 r mib8 re|
+  do do do do mib sol r fa~ |
+  fa fa fa sol mib4 sol8 sol |
+
+  % B
+  \mark "B"
+  \repeat volta 2 {
+    sol sol fa mib mib4 r8 fa~ |
+    fa fa fa mib fa fa fa sol |
+    mib4 do r r |
+    r2 r4 sol'8 sol |
+    sol sol fa mib mib4 mib8 fa~ |
+    fa fa fa mib fa fa fa sol |
+    mib4 do r r |
+    r1 |
+    r8 sol' fa mib fa sol r4 |
+    r1 |
+    r8 sol fa mib fa sol r4 |
+    r1 |
+    r2 fa8 sol r4 |
+    r1
+    r4 r8 fa8~ fa4 do |
+  }
+  \alternative {
+    { r2 r4 sol'8 sol | }
+    { r2 mib4 re4 | }
+  }
+
+  % C
+  \mark "C"
+  do r mib8 sol r fa~ |
+  fa8 sol r4 r mib8 re |
+  do do do do mib sol r fa~ |
+  fa sol r4 mib re |
+  do4 r mib8 sol r fa~ |
+  fa sol r4 r mib8 re |
+  do do do do mib sol r fa~ |
+  fa fa fa sol mib4 r |
+
+  % D
+  \mark "D"
+  sol4 mib8 sol~ sol16 lab8. fa8. sol16~ |
+  sol8 re4 fa8 lab4 fa8 lab |
+  sol4 mib8 do~ do lab4 si8~ |
+  si sol la si do re mib fa  |
+  sol16 do mib mib,~ mib8 do~ do16 lab' do mib sol,8. fa16~ |
+  fa8 re4 do8 si8. sol'16 lab si8 si16 |
+  r1 |
+  r1 |
+
+  % E
+  \mark "E"
+  r4 sol8 sol sol4 r |
+  r4 sol8 sol sol4 r |
+  r4 sol8 sol sol4 r |
+  r1 |
+  r8 r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+  r8 r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+  r8 r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+  r1 |
+  r8 r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+  r8 r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+  r8 r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+  r2 r8 sol sol sol~ |
+  sol sol fa mib sol sol sol fa~ |
+  fa fa fa mib fa fa fa sol |
+  mib4 do r2 |
+  r2 r4 sol'8 sol |
+  sol sol fa mib sol4 sol8 fa~ |
+  fa fa fa mib fa fa fa sol |
+  mib4 do r2 |
+  r1 |
+  r4 sol'2.~ |
+  sol8 fa mib fa~ fa do do mib |
+  r2 sol2~ |
+  sol8 fa mib fa~ fa do do mib |
+  r2 sol2~ |
+  sol8 fa mib fa~ fa do do mib |
+  r2 r8 sol4 fa8~ |
+  fa sol r4 mib re |
+  do r 
+
+
+
+}
+
+tenorSax = \relative do' {
+  \global
+  \compressFullBarRests
+
+  \repeat volta 2 {
+    do8 r do do do do4 re8 |
+    r8 si r re do4 do8 do |
+    do r do r r do do si |
+  }
+  \alternative {
+    { r8 si r4 r2 | }
+    { r8 si r4 r2 | }
+  }
+
+
+  % A
+  \mark "A"
+
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+  r1 |
+
+  % B
+  \mark "B"
+  \repeat volta 2 {
+
+    r1 |
+    r1 |
+    r1 |
+    r1 |
+    r1 |
+    r1 |
+    r1 |
+
+    r2 r8 do do do |
+    mib4 do r8 do do do |
+    re re re si r do do do |
+
+    mib4 do r8 do do do |
+    re re re si r do do do |
+    mib4 do r8 do do do |
+    re re re si r do do do |
+    mib4 do r8 do do do |
+
+  }
+  \alternative {
+    { re8 re re si r2 | }
+    { re8 re re si r2 | }
+  }
+}
+
+trombone = \relative do {
+  \global
+  \compressFullBarRests
+
+  \repeat volta 2 {
+    r8 r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+    r r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+    r r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+  }
+
+  \alternative {
+    { r1 | }
+    { r8 sol r4 r8 lab' r4 | }
+  }
+
+  % A
+  \mark "A"
+  do8 r do r r lab r sol |
+  r sol r re fa4 lab |
+  sol8 r sol r  r lab r si |
+  r si r re, fa4 lab |
+  do,4 mib8 sol fa lab r sol|
+  r sol r sol fa4 lab |
+  do,4 mib8 sol fa lab r sol|
+  r sol r4 fa, lab |
+  do,8 do' do, do' fa,, fa' r sol, |
+  sol sol' sol, sol' fa4 lab |
+  do,8 do' do, do' lab, lab' r sol, |
+  sol sol' sol, sol' r8 fa, lab sib |
+
+  % B
+  \mark "B"
+  \repeat volta 2 {
+
+    do4 r8 fa~ fa fa lab sol~ |
+    sol sol r sol fa fa sol fa |
+    do4 r8 mib fa fa lab sol~ |
+    sol sol4 sol8 fa8 fa lab4 |
+    do, mib8 sol~ sol sol lab sol~ |
+    sol sol r sol fa fa lab fa  |
+    do4 r8 fa~ fa fa lab sol~  |
+
+    sol sol4 sol8 fa fa sol fa |
+    do4 do fa fa8 sol~ |
+    sol sol4 sol8 fa4 lab |
+
+    do, do fa fa8 sol~ |
+    sol sol4 sol8 fa fa lab fa |
+    do4 do fa fa8 sol~ |
+    sol sol4 sol8 fa4 lab |
+    do4 do fa fa8 sol~ |
+
+  }
+  \alternative {
+    { sol8 sol4 sol8 fa8 fa fa4 | }
+    { sol8 sol4 sol8 fa4 lab | }
+  }
+
+
+}
+
+bassTuba = \relative do {
+  \global
+  \compressFullBarRests
+
+  \repeat volta 2 {
+    r8 r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+    r r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+    r r-"hey" r r-"hey" r r-"hey" r r-"hey" |
+  }
+
+  \alternative {
+    { r1 | }
+    { r8 sol r4 r8 lab' r4 | }
+  }
+
+  % A
+  \mark "A"
+  do8 r do r r lab r sol |
+  r sol r re fa4 lab |
+  sol8 r sol r  r lab r si |
+  r si r re, fa4 lab |
+  do,4 mib8 sol fa lab r sol|
+  r sol r sol fa4 lab |
+  do,4 mib8 sol fa lab r sol|
+  r sol r4 fa, lab |
+  do,8 do' do, do' fa,, fa' r sol, |
+  sol sol' sol, sol' fa4 lab |
+  do,8 do' do, do' lab, lab' r sol, |
+  sol sol' sol, sol' r8 fa, lab sib |
+
+  % B
+  \mark "B"
+  \repeat volta 2 {
+
+    do4 r8 fa~ fa fa lab sol~ |
+    sol sol r sol fa fa sol fa |
+    do4 r8 mib fa fa lab sol~ |
+    sol sol4 sol8 fa8 fa lab4 |
+    do, mib8 sol~ sol sol lab sol~ |
+    sol sol r sol fa fa lab fa  |
+    do4 r8 fa~ fa fa lab sol~  |
+
+    sol sol4 sol8 fa fa sol fa |
+    do4 do fa fa8 sol~ |
+    sol sol4 sol8 fa4 lab |
+
+    do, do fa fa8 sol~ |
+    sol sol4 sol8 fa fa lab fa |
+    do4 do fa fa8 sol~ |
+    sol sol4 sol8 fa4 lab |
+    do4 do fa fa8 sol~ |
+
+  }
+  \alternative {
+    { sol8 sol4 sol8 fa8 fa fa4 | }
+    { sol8 sol4 sol8 fa4 lab | }
+  }
+
+
+}
+
+trumpetBbPart = \new Staff \with {
+  instrumentName = "Trumpet in Bb"
+  midiInstrument = "trumpet"
+} \trumpetBb
+
+clarinetPart = \new Staff \with {
+  instrumentName = "Clarinet"
+  midiInstrument = "clarinet"
+} \clarinet
+
+altoSaxPart = \new Staff \with {
+  instrumentName = "Alto Sax"
+  midiInstrument = "alto sax"
+} {\clef "treble_8" \altoSax }
+
+tenorSaxPart = \new Staff \with {
+  instrumentName = "Tenor Sax"
+  midiInstrument = "tenor sax"
+} { \clef "treble_8" \tenorSax }
+
+trombonePart = \new Staff \with {
+  instrumentName = "Trombone"
+  midiInstrument = "trombone"
+} { \clef bass \trombone }
+
+bassTubaPart = \new Staff \with {
+  instrumentName = "Souba"
+  midiInstrument = "tuba"
+} { \clef "bass_8" \bassTuba }
+
+\book {
+  \paper {
+    print-all-headers = ##t
+  }
+
+  \score {
+
+    <<
+      \trumpetBbPart
+      \clarinetPart
+      \altoSaxPart
+      \tenorSaxPart
+      \trombonePart
+      \bassTubaPart
+    >>
+    \layout { }
+  }
+
+  \pageBreak
+
+  \score {
+    <<
+      \transpose do re \trumpetBbPart
+    >>
+  }
+
+  \pageBreak
+
+  \score {
+    <<
+      \transpose do la, \altoSaxPart
+    >>
+  }
+
+  \pageBreak
+
+  \score {
+    <<
+      \transpose do re \tenorSaxPart
+    >>
+  }
+
+  \pageBreak
+
+  \score {
+    <<
+      \trombonePart
+    >>
+  }
+
+  \pageBreak
+
+  \score {
+    <<
+      \transpose do re \bassTubaPart
+    >>
+  }
+
+  \pageBreak
+  \score {
+
+    <<
+      \unfoldRepeats \articulate \trumpetBbPart
+      \unfoldRepeats \articulate \clarinetPart
+      \unfoldRepeats \articulate \altoSaxPart
+      \unfoldRepeats \articulate \tenorSaxPart
+      \unfoldRepeats \articulate \trombonePart
+      \unfoldRepeats \articulate \bassTubaPart
+    >>
+    \layout { }
+    \midi {
+      \context {
+        \Score
+        tempoWholesPerMinute = #(ly:make-moment 140 4)
+      }
+    }
+  }
+
+}
